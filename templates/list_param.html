@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список профессий</title>
+</head>
+<body>
+
+<header>
+    <h1>Миссия колонизации Марса</h1>
+</header>
+
+<h2>Список профессий</h2>
+<hr>
+
+{% if list_param == "ul" %}
+<ul>
+{% for elem in profession_list %}
+<li>{{ elem }}</li>
+{% endfor %}
+</ul>
+
+{% elif list_param == "ol" %}
+<ol>
+{% for elem in profession_list %}
+<li>{{ elem }}</li>
+{% endfor %}
+</ol>
+{% else %}
+<h3>Ошибка: неверный параметр</h3>
+{% endif %}
+
+</body>
+</html>
